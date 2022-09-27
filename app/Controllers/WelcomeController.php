@@ -8,6 +8,6 @@ class WelcomeController
 {
     public function index()
     {
-        return (new View)->render("welcome", []);
+        return (new View)->render("auth/login");
     }
 }

@@ -17,6 +17,7 @@ $router->get( route: "/", handler: "WelcomeController:index" );
 $router->group( group: "auth" );
 $router->get("/login", "Auth\LoginController:index");
 $router->get("/create-user", "Auth\CreateController:index");
+$router->post("/create-new-user", "Auth\CreateController:store");
 $router->get("/forgot-password", "Auth\ForgotPasswordController:index");
 
 /**
