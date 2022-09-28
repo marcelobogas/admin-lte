@@ -41,7 +41,22 @@ class Database
             return $connection;
         } catch (PDOException $e) {
             /* retorna uma mensagem apresentando o erro ocorrido */
-            throw new Exception($e->getMessage());
+            die("Erro: " . $e->getMessage());
+        }
+    }
+    
+    /**
+     * Método responável por verificar se existe conexão com o banco de dados
+     *
+     * @return void
+     */
+    public static function verifyConnection()
+    {
+        $conn = self::getConnection();
+        
+        /* retorna a menagem de erro */
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
         }
     }
 }

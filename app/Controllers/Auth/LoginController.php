@@ -3,7 +3,6 @@
 namespace App\Controllers\Auth;
 
 use App\Helpers\View;
-use App\Http\Request;
 
 class LoginController
 {
@@ -14,21 +13,10 @@ class LoginController
      */
     public function index()
     {
-        $data = [
-            'date' => date('d/m/Y')
-        ];
-
-        return (new View)->render("auth/login", $data);
+        return (new View)->render("auth/login", []);
     }
 
-    /**
-     * Method store
-     *
-     * @param Request $request [explicite description]
-     *
-     * @return void
-     */
-    public function store(Request $request)
+    public function store($request)
     {
         echo '<pre>';
         print_r($request);

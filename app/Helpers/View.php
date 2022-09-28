@@ -50,7 +50,8 @@ class View
             'assets'   => APP_ASSETS,
             'vendor'   => APP_VENDOR,
             'storage'  => APP_STORAGE,
-            'language' => APP_LANGUAGE
+            'language' => APP_LANGUAGE,
+            'url'      => URL_BASE
         ];
 
         return $data;

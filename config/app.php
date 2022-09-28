@@ -1,6 +1,6 @@
 <?php 
 
-/* define a URL base para o projeto */
+/* define constantes para o projeto */
 define('URL_BASE', "http://localhost/admin-lte");
 
 define('APP_VENDOR', URL_BASE . "/vendor");
